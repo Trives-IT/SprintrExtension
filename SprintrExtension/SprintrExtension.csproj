@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ModelVersionChecker.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Mendix.StudioPro.ExtensionsAPI" Version="10.21.1" />
   </ItemGroup>
 
