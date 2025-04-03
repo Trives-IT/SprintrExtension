@@ -18,6 +18,15 @@ namespace SprintrExtension
             yield return new MenuViewModel("Environments" , () => dockingWindowService.OpenPane(SprintrEnvironmentsPaneExtension.ID));
             yield return new MenuViewModel("Logs", () => dockingWindowService.OpenPane(SprintrLogPaneExtension.ID));
             yield return new MenuViewModel("Backups", () => dockingWindowService.OpenPane(SprintrBackupPaneExtension.ID));
+            yield return new MenuViewModel("Close all", () =>
+            {
+                dockingWindowService.ClosePane(SprintrHomePaneExtension.ID);
+                dockingWindowService.ClosePane(SprintrTeamPaneExtension.ID);
+                dockingWindowService.ClosePane(SprintrSettingsPaneExtension.ID);
+                dockingWindowService.ClosePane(SprintrEnvironmentsPaneExtension.ID);
+                dockingWindowService.ClosePane(SprintrLogPaneExtension.ID);
+                dockingWindowService.ClosePane(SprintrBackupPaneExtension.ID);
+            });
         }
     }
 }
